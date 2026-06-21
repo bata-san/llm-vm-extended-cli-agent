@@ -1,0 +1,22 @@
+# Rust
+/target
+**/target
+Cargo.lock.bak
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local databases / state
+*.db
+*.db-shm
+*.db-wal
+.llmvm/
+.env
+.env.*
+
+# Logs
+*.log

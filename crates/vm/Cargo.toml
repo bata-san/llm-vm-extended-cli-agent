@@ -1,0 +1,22 @@
+[package]
+name = "llm-vm-vm"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Deterministic VM over a DAG of task nodes (petgraph)."
+
+[dependencies]
+petgraph.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+sha2.workspace = true
+hex.workspace = true
+async-trait = "0.1"
+llm-vm-wal.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true

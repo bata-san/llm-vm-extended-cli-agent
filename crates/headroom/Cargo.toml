@@ -1,0 +1,14 @@
+[package]
+name = "llm-vm-headroom"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Headroom: pre-LLM compression of tool output / logs (JSON / AST / ML-lite)."
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+regex = "1.10"

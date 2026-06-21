@@ -1,0 +1,29 @@
+[package]
+name = "llm-vm-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "CLI front-end (clap + ratatui) for the LLM-VM Extended CLI Agent."
+
+[[bin]]
+name = "llmvm"
+path = "src/main.rs"
+
+[dependencies]
+tokio.workspace = true
+clap.workspace = true
+ratatui.workspace = true
+crossterm.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+llm-vm-core.workspace = true
+llm-vm-vm.workspace = true
+llm-vm-wal.workspace = true
+llm-vm-protocol.workspace = true
+llm-vm-headroom.workspace = true
+llm-vm-graphrag.workspace = true
+llm-vm-gpte.workspace = true

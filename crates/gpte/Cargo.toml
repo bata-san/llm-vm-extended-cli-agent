@@ -1,0 +1,14 @@
+[package]
+name = "llm-vm-gpte"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "gPTE: graph-task prompt tuning (LEAP-style) for DAG generation / repair."
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+llm-vm-vm.workspace = true

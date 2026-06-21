@@ -1,0 +1,16 @@
+[package]
+name = "llm-vm-protocol"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Foundational protocols: guided decoding, sentinel+overlap-diff, hedge requests."
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+tokio.workspace = true
+futures.workspace = true

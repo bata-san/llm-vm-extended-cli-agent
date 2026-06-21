@@ -1,0 +1,15 @@
+[package]
+name = "llm-vm-graphrag"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "GraphRAG: codebase knowledge graph for multi-hop reasoning."
+
+[dependencies]
+petgraph.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+regex = "1.10"

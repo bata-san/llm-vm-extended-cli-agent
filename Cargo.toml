@@ -1,0 +1,74 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/vm",
+    "crates/wal",
+    "crates/protocol",
+    "crates/llm-core",
+    "crates/headroom",
+    "crates/graphrag",
+    "crates/gpte",
+    "crates/cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Kawabata Haruki <youguitest@gmail.com>"]
+description = "LLM-VM Extended CLI Agent: a deterministic coding agent that stays stable under poor API conditions (40 RPM, truncation, tool-call failures)."
+repository = "https://github.com/llm-vm/extended-cli-agent"
+readme = "README.md"
+keywords = ["llm", "agent", "deterministic", "vm", "cli"]
+categories = ["command-line-utilities", "development-tools"]
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1.37", features = ["full"] }
+tokio-stream = "0.1"
+futures = "0.3"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Error handling
+anyhow = "1"
+thiserror = "1"
+
+# Logging / tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Graphs / DAG
+petgraph = "0.6"
+
+# Hashing / crypto
+sha2 = "0.10"
+hex = "0.4"
+
+# Storage
+rusqlite = { version = "0.31", features = ["bundled"] }
+
+# HTTP client (rustls to avoid OpenSSL on Windows)
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "stream"] }
+
+# CLI / TUI
+clap = { version = "4.5", features = ["derive", "env"] }
+ratatui = "0.26"
+crossterm = "0.27"
+
+# Internal crates
+llm-vm-vm = { path = "crates/vm" }
+llm-vm-wal = { path = "crates/wal" }
+llm-vm-protocol = { path = "crates/protocol" }
+llm-vm-core = { path = "crates/llm-core" }
+llm-vm-headroom = { path = "crates/headroom" }
+llm-vm-graphrag = { path = "crates/graphrag" }
+llm-vm-gpte = { path = "crates/gpte" }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true
