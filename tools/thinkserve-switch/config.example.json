@@ -1,0 +1,13 @@
+{
+  "LlamaServerPath": "C:\\llama.cpp\\llama-server.exe",
+  "ModelPath": "D:\\models\\Qwen3.8-27B-Q6_K.gguf",
+  "TailscalePath": "C:\\Program Files\\Tailscale\\tailscale.exe",
+  "LocalPort": 8080,
+  "TailscaleHttpsPort": 443,
+  "ContextSize": 16384,
+  "GpuLayers": 99,
+  "IdleSleepSeconds": 0,
+  "ReadyTimeoutSeconds": 180,
+  "ExtraArgs": "",
+  "RestoreLastMode": true
+}
